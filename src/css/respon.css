@@ -1,0 +1,40 @@
+@media (max-width:1120px){
+    .head .logo{
+        max-width: 190px;
+    }
+
+    .selection-persona{
+        flex-direction: column-reverse;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .selection-persona .personas{
+        margin-top: 37px;
+    }
+
+    .selection-persona .title{
+        font-size: 15px;
+    }
+
+    .selection-persona .list-persona{
+        gap: 9px;
+    }
+
+    .select-persona .personas img{
+        width: 80px;
+    }
+
+    .select-persona .big-persona{
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .select-persona .description-persona{
+        width: 80%;
+        font-size: 16px;
+        margin: 0 auto;
+
+    }
+}
