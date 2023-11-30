@@ -34,15 +34,6 @@ ul {
     transform: rotate(-2deg);
   }
 }
-@keyframes logo {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.01);
-  }
-}
 @keyframes hoverCard {
   0% {
     transform: rotate(2deg);
@@ -66,20 +57,17 @@ body {
   color: white;
   overflow-x: hidden;
 }
-
-.head {
-  animation: logo 4s ease-in-out alternate-reverse infinite;
+body .head {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 1124px) {
-  .head {
+  body .head {
     margin: 0 auto;
     max-width: 190px;
   }
 }
-
-.selection-persona {
+body .selection-persona {
   animation: opacity 5s;
   padding: 0px 20px;
   display: flex;
@@ -89,24 +77,24 @@ body {
   min-height: calc(100vh - 152px);
 }
 @media (max-width: 1124px) {
-  .selection-persona {
+  body .selection-persona {
     flex-direction: column-reverse;
     max-width: 630px;
     margin: 0 auto;
   }
 }
-.selection-persona .list-persona {
+body .selection-persona .list-persona {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 @media (max-width: 1124px) {
-  .selection-persona {
+  body .selection-persona .list-persona {
     gap: 9px;
   }
 }
-.selection-persona .personas {
+body .selection-persona .personas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,33 +102,46 @@ body {
   gap: 25px;
 }
 @media (max-width: 1124px) {
-  .selection-persona {
+  body .selection-persona .personas {
     margin-top: 37px;
   }
-  .selection-persona .title {
-    font-size: 20px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #47f4ff;
-    width: 100%;
-    text-align: center;
+}
+body .selection-persona .personas {
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #47f4ff;
+}
+@media (max-width: 1124px) {
+  body .selection-persona .personas {
+    width: 80px;
   }
 }
-@media (max-width: 1124px) and (max-width: 1124px) {
-  .selection-persona .title {
+body .selection-persona .personas:hover {
+  animation: hoverCard 1s ease-in-out;
+}
+body .selection-persona .personas .title {
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #47f4ff;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 1124px) {
+  body .selection-persona .personas .title {
     font-size: 15px;
   }
 }
-.selection-persona {
+body .selection-persona {
   text-align: center;
 }
-.selection-persona .name-persona {
+body .selection-persona .name-persona {
   border-bottom: 2px solid #47f4ff;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 20px;
 }
-.selection-persona .description-persona {
+body .selection-persona .description-persona {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -148,44 +149,25 @@ body {
   width: 450px;
 }
 @media (max-width: 1124px) {
-  .selection-persona .description-persona {
+  body .selection-persona .description-persona {
     width: 80%;
     min-height: 80px;
     font-size: 16px;
     margin: 0 auto;
   }
 }
-
-.select-persona .big-persona {
+body .selection-persona .select-persona .big-persona {
   animation: BPersona 4s ease-in-out alternate infinite;
   width: 420px;
   height: 420px;
 }
 @media (max-width: 1124px) {
-  .select-persona .big-persona {
+  body .selection-persona .select-persona .big-persona {
     width: 350px;
     height: 350px;
   }
 }
-
-.list-persona png {
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 1124px) {
-  .list-persona png {
-    width: 80px;
-  }
-}
-
-.list-persona .persona {
-  border-bottom: 4px solid #47f4ff;
-}
-.list-persona .persona:hover {
-  animation: hoverCard 1s ease-in-out;
-}
-
-.persona.selection {
+body .selection-persona .persona.selection {
   animation: pulse 4s ease-in-out alternate-reverse infinite;
   box-shadow: 0px 0px 24px 5px #0271f7;
 }
