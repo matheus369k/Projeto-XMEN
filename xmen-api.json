@@ -1,0 +1,52 @@
+{
+    "personas":[
+        {"name": "Ciclope",
+        "description": "Ele tem o poder de disparar rajadas ópticas por um acidente que aconteceu com ele quando criança, mas não consegue controlá-los.",
+        "images": {
+            "jpg":  "./src/img/card-ciclope.jpg",
+            "png": "./src/img/card-ciclope.png"
+        }},
+        {"name": "Jean-Grey",
+        "description": "Jean Grey é uma mutante nível ômega e o principal avatar da Força Fênix, no qual manifesta poderes cósmicos. A telepatia e telecinese.",
+        "images": {
+            "jpg":  "./src/img/card-jean-grey.jpg",
+            "png": "./src/img/card-jean-grey.png"
+        }},
+        {"name": "Lince-Negra",
+        "description": "Ela tem o poder de atravessar matéria sólida,campos de energia,rajadas ópticas, continuando intacta,e também tem o poder de andar no ar.",
+        "images": {
+            "jpg":  "./src/img/card-lince-negra.jpg",
+            "png": "./src/img/card-lince-negra.png"
+        }},
+        {"name": "Tempestade",
+        "description": "Tem o poder de controlar as forças da natureza, muito poderosa ela pode produzir raios, chuvas, gelos, ventos, neblina, entre outros efeitos.",
+        "images": {
+            "jpg":  "./src/img/card-tempestade.jpg",
+            "png": "./src/img/card-tempestade.png"
+        }},
+        {"name": "Vampira",
+        "description": "Ela tem o poder de absorver a vitalidade e memória das pessoas que toca ou no caso dos mutantes os poderes e a memória, mas só temporariamente.",
+        "images": {
+            "jpg":  "./src/img/card-vampira.jpg",
+            "png": "./src/img/card-vampira.png"
+        }},
+        {"name": "Wolverine",
+        "description": "Poderes. Garras Metálicas. Fator de Cura Regenerativo, Super Agilidade.",
+        "images": {
+            "jpg":  "./src/img/card-wolverine.jpg",
+            "png": "./src/img/card-wolverine.png"
+        }},
+        {"name": "Noturno",
+        "description": "Ele é um mutante que nasceu com cauda, orelhas pontudas e com o poder de se Teletransportar.",
+        "images": {
+            "jpg":  "./src/img/card-noturno.jpg",
+            "png": "./src/img/card-noturno.png"
+        }},
+        {"name": "Magneto",
+        "description": "Ele tem o poder de magnetocinese, ou seja, controlar objetos de metal e criar campos magnéticos.",
+        "images": {
+            "jpg":  "./src/img/card-magneto.jpg",
+            "png": "./src/img/card-magneto.png"
+        }}
+    ]
+}

@@ -1,0 +1,193 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes BPersona {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 24px 10px rgba(2, 112, 247, 0.4549019608);
+    transform: rotate(2deg);
+  }
+  100% {
+    box-shadow: 0px 0px 24px 2px rgba(2, 112, 247, 0.5176470588);
+    transform: rotate(-2deg);
+  }
+}
+@keyframes logo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+@keyframes hoverCard {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+body {
+  min-height: 100vh;
+  height: 100%;
+  font-family: "oxanium", "Courier New", Courier, monospace;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.941), rgba(0, 0, 0, 0.916)), url("../img/bg-desktop.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.head {
+  animation: logo 4s ease-in-out alternate-reverse infinite;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1124px) {
+  .head {
+    margin: 0 auto;
+    max-width: 190px;
+  }
+}
+
+.selection-persona {
+  animation: opacity 5s;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  min-height: calc(100vh - 152px);
+}
+@media (max-width: 1124px) {
+  .selection-persona {
+    flex-direction: column-reverse;
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}
+.selection-persona .list-persona {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 1124px) {
+  .selection-persona {
+    gap: 9px;
+  }
+}
+.selection-persona .personas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 585px;
+  gap: 25px;
+}
+@media (max-width: 1124px) {
+  .selection-persona {
+    margin-top: 37px;
+  }
+  .selection-persona .title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #47f4ff;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1124px) and (max-width: 1124px) {
+  .selection-persona .title {
+    font-size: 15px;
+  }
+}
+.selection-persona {
+  text-align: center;
+}
+.selection-persona .name-persona {
+  border-bottom: 2px solid #47f4ff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.selection-persona .description-persona {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  min-height: 100px;
+  width: 450px;
+}
+@media (max-width: 1124px) {
+  .selection-persona .description-persona {
+    width: 80%;
+    min-height: 80px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+
+.select-persona .big-persona {
+  animation: BPersona 4s ease-in-out alternate infinite;
+  width: 420px;
+  height: 420px;
+}
+@media (max-width: 1124px) {
+  .select-persona .big-persona {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.list-persona png {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1124px) {
+  .list-persona png {
+    width: 80px;
+  }
+}
+
+.list-persona .persona {
+  border-bottom: 4px solid #47f4ff;
+}
+.list-persona .persona:hover {
+  animation: hoverCard 1s ease-in-out;
+}
+
+.persona.selection {
+  animation: pulse 4s ease-in-out alternate-reverse infinite;
+  box-shadow: 0px 0px 24px 5px #0271f7;
+}
+
+/*# sourceMappingURL=style.css.map */

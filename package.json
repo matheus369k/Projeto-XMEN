@@ -1,0 +1,23 @@
+{
+  "name": "projeto-xmen",
+  "version": "1.0.0",
+  "description": "Project XMen",
+  "main": "jquery-3.7.1.min.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheus369k/Projeto-XMEN.git"
+  },
+  "author": "matheus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheus369k/Projeto-XMEN/issues"
+  },
+  "homepage": "https://github.com/matheus369k/Projeto-XMEN#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "yarn": "^1.22.21"
+  }
+}
