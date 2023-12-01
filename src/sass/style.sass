@@ -1,36 +1,8 @@
 @import 'reset.sass'
+@import 'Animation'
+
 @import '_mixins'
-
-@keyframes opacity
-    0%
-        opacity: 0
-
-    100%
-        opacity: 1
-
-@keyframes BPersona
-    0%
-        transform: translateY(0px)
-
-    100%
-        transform: translateY(20px)
-
-@keyframes pulse
-    0%
-        box-shadow: 0px 0px 24px 10px #0270f774
-        transform: rotate(2deg)
-
-    100%
-        box-shadow: 0px 0px 24px 2px #0270f784
-        transform: rotate(-2deg)
-
-@keyframes hoverCard
-    0%
-        transform: rotate(2deg)
-    50%
-        transform: rotate(-2deg)
-    100%
-        transform: rotate(0)
+@import '_variables'
 
 body
     min-height: 100vh
@@ -49,83 +21,121 @@ body
     overflow-x: hidden
 
     .head
-        display: flex
-        justify-content: center
+        max-width: $max-wdth
+        animation: opacity 5s
+        @include flex-center()
 
-        @include responsive()
+        @include responsive-1124()
             margin: 0 auto
             max-width: 190px
 
     .selection-persona
+        max-width: $max-wdth
         animation: opacity 5s
+
+        position: relative
+        top: 50px
+
+        gap: 50px
 
         padding: 0px 20px
 
-        display: flex
-        align-items: center
-        justify-content: center
-
-        gap: 30px
+        @include flex-center()
 
         min-height: calc(100vh - 152px)
+        height: 100%
 
-        @include responsive()
+        @include responsive-1124()
             flex-direction: column-reverse
             max-width: 630px
             margin: 0 auto
 
-        .list-persona
-            display: flex
-            flex-wrap: wrap
-            justify-content: center
+            gap: 10px
 
-            gap: 20px
-
-            @include responsive()
-                gap: 9px
+        @include responsive-mobile-444()
+            padding: 0px 5px
 
         .personas
-            display: flex
+            @include flex-center()
+
             flex-direction: column
-            align-items: center
             max-width: 585px
             gap: 25px
 
-            @include responsive()
+            @include responsive-1124()
                 margin-top: 37px
-
-            &img
-                width: 100%
-                height: 100%
-
-                border-bottom: 4px solid #47f4ff
-
-                @include responsive()
-                    width: 80px
-            
-
-                &:hover
-                    animation: hoverCard 1s ease-in-out
 
             .title
                 font-size: 20px
                 letter-spacing: 4px
                 text-transform: uppercase
-                border-bottom: 2px solid #47f4ff
+                border-bottom: 2px solid $bottom-border-color
                 width: 100%
                 text-align: center
 
-                @include responsive()
+                @include responsive-1124()
                     font-size: 15px
 
-        &
-            text-align: center
+            .list-persona
+                @include flex-center()
+
+                z-index: 2
+
+                flex-wrap: wrap
+
+                justify-content: space-between
+
+                gap: 20px
+
+                @include responsive-1124()
+                    gap: 10px
+                
+                @include responsive-mobile-444()
+                    gap: 5px
+
+                .persona
+                    height: 210px
+                    width: 130px
+
+                    border-bottom: 4px solid $bottom-border-color
+
+                    @include responsive-mobile-624()
+                        height: 200px
+                        width: 110px
+
+                    @include responsive-mobile-524()
+                        height: 150px
+                        width: 88px
+                    
+                    @include responsive-mobile-444()
+                        height: 120px
+                        width: 80px
+
+
+                    &:hover
+                        animation: hoverCard 1s ease-in-out
+
+                    img
+                        height: 100%
+                        width: 100%
+                        margin-bottom: -5px
+
+        .select-persona.animation
+            animation: big-persona-hider .1s ease-in
+
+        .select-persona 
+            width: 450px
+            height: 600px
+
+            @include responsive-1124()
+                height: 500px
 
         .name-persona
-            border-bottom: 2px solid #47f4ff
+            border-bottom: 2px solid $bottom-border-color
             text-transform: uppercase
             letter-spacing: 4px
             margin-bottom: 20px
+            text-align: center
 
         .description-persona
             font-size: 16px
@@ -134,21 +144,26 @@ body
             min-height: 100px
             width: 450px
 
-            @include responsive()
+            @include responsive-1124()
                 width: 80%
-                min-height: 80px
+                min-height: 0px
                 font-size: 16px
                 margin: 0 auto
 
-        .select-persona .big-persona
+        .big-persona
             animation: BPersona 4s ease-in-out alternate infinite
 
             width: 420px
             height: 420px
+            display: block
 
-            @include responsive()
-                width: 350px
-                height: 350px
+            margin: 0 auto
+
+            z-index: 0
+
+            @include responsive-1124()
+                width: 380px
+                height: 380px
 
         .persona.selection
             animation: pulse 4s ease-in-out alternate-reverse infinite
