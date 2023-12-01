@@ -52,8 +52,8 @@ body
 
             gap: 10px
 
-        @include responsive-mobile-444()
-            padding: 0px 5px
+        @include responsive-mobile-624()
+            padding: 0px 10px
 
         .personas
             @include flex-center()
@@ -78,6 +78,8 @@ body
 
             .list-persona
                 @include flex-center()
+                
+                padding: 25px 0
 
                 z-index: 2
 
@@ -85,13 +87,14 @@ body
 
                 justify-content: space-between
 
-                gap: 20px
+                row-gap: 20px
 
                 @include responsive-1124()
-                    gap: 10px
-                
-                @include responsive-mobile-444()
-                    gap: 5px
+                    row-gap: 15px
+
+                @include responsive-mobile-624()
+                    justify-content: center
+                    gap: 25px 10px
 
                 .persona
                     height: 210px
@@ -100,16 +103,8 @@ body
                     border-bottom: 4px solid $bottom-border-color
 
                     @include responsive-mobile-624()
-                        height: 200px
-                        width: 110px
-
-                    @include responsive-mobile-524()
-                        height: 150px
-                        width: 88px
-                    
-                    @include responsive-mobile-444()
-                        height: 120px
-                        width: 80px
+                        height: auto
+                        width: calc(25% - 10px)
 
 
                     &:hover
@@ -129,26 +124,31 @@ body
 
             @include responsive-1124()
                 height: 500px
+                width: 100%
+    
+        .information-persona
+            width: 100%
 
-        .name-persona
-            border-bottom: 2px solid $bottom-border-color
-            text-transform: uppercase
-            letter-spacing: 4px
-            margin-bottom: 20px
-            text-align: center
+            .name-persona
+                border-bottom: 2px solid $bottom-border-color
+                text-transform: uppercase
+                letter-spacing: 4px
+                margin-bottom: 20px
+                text-align: center
+                width: 100%
 
-        .description-persona
-            font-size: 16px
-            line-height: 22px
-            text-align: center
-            min-height: 100px
-            width: 450px
-
-            @include responsive-1124()
-                width: 80%
-                min-height: 0px
+            .description-persona
                 font-size: 16px
-                margin: 0 auto
+                line-height: 22px
+                text-align: center
+                min-height: 100px
+                width: 450px
+
+                @include responsive-1124()
+                    width: 80%
+                    min-height: 0px
+                    font-size: 16px
+                    margin: 0 auto
 
         .big-persona
             animation: BPersona 4s ease-in-out alternate infinite
@@ -164,6 +164,10 @@ body
             @include responsive-1124()
                 width: 380px
                 height: 380px
+
+            @include responsive-mobile-624()
+                width: 320px
+                height: 320px
 
         .persona.selection
             animation: pulse 4s ease-in-out alternate-reverse infinite

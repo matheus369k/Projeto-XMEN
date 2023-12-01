@@ -100,9 +100,9 @@ body .selection-persona {
     gap: 10px;
   }
 }
-@media (max-width: 444px) {
+@media (max-width: 624px) {
   body .selection-persona {
-    padding: 0px 5px;
+    padding: 0px 10px;
   }
 }
 body .selection-persona .personas {
@@ -135,19 +135,21 @@ body .selection-persona .personas .list-persona {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px 0;
   z-index: 2;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  row-gap: 20px;
 }
 @media (max-width: 1124px) {
   body .selection-persona .personas .list-persona {
-    gap: 10px;
+    row-gap: 15px;
   }
 }
-@media (max-width: 444px) {
+@media (max-width: 624px) {
   body .selection-persona .personas .list-persona {
-    gap: 5px;
+    justify-content: center;
+    gap: 25px 10px;
   }
 }
 body .selection-persona .personas .list-persona .persona {
@@ -157,20 +159,8 @@ body .selection-persona .personas .list-persona .persona {
 }
 @media (max-width: 624px) {
   body .selection-persona .personas .list-persona .persona {
-    height: 200px;
-    width: 110px;
-  }
-}
-@media (max-width: 524px) {
-  body .selection-persona .personas .list-persona .persona {
-    height: 150px;
-    width: 88px;
-  }
-}
-@media (max-width: 444px) {
-  body .selection-persona .personas .list-persona .persona {
-    height: 120px;
-    width: 80px;
+    height: auto;
+    width: calc(25% - 10px);
   }
 }
 body .selection-persona .personas .list-persona .persona:hover {
@@ -191,16 +181,21 @@ body .selection-persona .select-persona {
 @media (max-width: 1124px) {
   body .selection-persona .select-persona {
     height: 500px;
+    width: 100%;
   }
 }
-body .selection-persona .name-persona {
+body .selection-persona .information-persona {
+  width: 100%;
+}
+body .selection-persona .information-persona .name-persona {
   border-bottom: 2px solid #47f4ff;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 20px;
   text-align: center;
+  width: 100%;
 }
-body .selection-persona .description-persona {
+body .selection-persona .information-persona .description-persona {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -208,7 +203,7 @@ body .selection-persona .description-persona {
   width: 450px;
 }
 @media (max-width: 1124px) {
-  body .selection-persona .description-persona {
+  body .selection-persona .information-persona .description-persona {
     width: 80%;
     min-height: 0px;
     font-size: 16px;
@@ -227,6 +222,12 @@ body .selection-persona .big-persona {
   body .selection-persona .big-persona {
     width: 380px;
     height: 380px;
+  }
+}
+@media (max-width: 624px) {
+  body .selection-persona .big-persona {
+    width: 320px;
+    height: 320px;
   }
 }
 body .selection-persona .persona.selection {
