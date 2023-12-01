@@ -56,7 +56,7 @@ function SelecedPersona(listPersonas) {
 
             if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
 
-                window.scroll(0, 10)
+                window.scroll(0, 0)
                 
             }else {
 
