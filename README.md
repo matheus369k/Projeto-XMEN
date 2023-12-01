@@ -13,6 +13,10 @@
 ## ⚙️Desenvolvimento
 
 - Na criação do projeto fora utilizado logica de programação na criação das funções, sendo uma delas a de troca de informação de acordo com o personagem selecionado, sendo utilizando __JavaScript__ e sua biblioteca __JQuery__ na sua criação.
+
+- Fora utiliado um Arquivo __.Json__ para servir como __API__ do Projeto.
+
+-  Na coleta de informações dos personagens fora utilizado o __ajax__ do __JQuery__ para fazer o request dos dados de cada personagem.
   
 - Tendo sido desenvolvido como uma projeto totalmente responsivo utilizando __MediaQuerys__ no __Sass__.
   
